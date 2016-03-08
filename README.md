@@ -15,12 +15,24 @@ Os passos mais complicados são os para a geração do Token.
 3. Toda a instrução de como gerar o token está detalhada aqui: https://api.slack.com/docs/oauth
 4. Criando a requisição para permitir a aplicação:
 	1. Após a criação do seu aplicativo observe os campos *client_id* e *client_secret*
-	2. Acesse a url para solicitar a permissão do token: https://slack.com/oauth/authorize?client_id=<CLIENT_ID>&scope=channels:read channels:write chat:write:bot
+	2. Acesse a url para solicitar a permissão do token:
+	```
+	https://slack.com/oauth/authorize?client_id=<CLIENT_ID>&scope=channels:read channels:write chat:write:bot
+	```
 	3. O scope é uma parâmetro com quais serão as permissões do aplicativo;
 	4. Ao autorizar seu aplicativo para um determinado canal, ele te redirecionará para a url setada na configuração do aplicativo;
-	5. Anote o código inserido na URL de retorno: <SUA_URL>code=...
-	6. Acesse: https://slack.com/api/oauth.access?client_id=<CLIENT_ID>&code=<CODE>&client_secret=<CLIENT_SECRE>
-	7. Anote o seu token que se parecerá com: xoxo-2100000415-0000000000-0000000000-ab1ab1
+	5. Anote o código inserido na URL de retorno:
+	```
+	<SUA_URL>code=...
+	```
+	6. Acesse:
+	```
+	https://slack.com/api/oauth.access?client_id=<CLIENT_ID>&code=<CODE>&client_secret=<CLIENT_SECRE>
+	```
+	7. Anote o seu token que se parecerá com:
+	```
+	xoxo-2100000415-0000000000-0000000000-ab1ab1
+	```
 5. Após isso basta executar algum código semelhante à:
 
 ```
